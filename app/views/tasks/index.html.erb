@@ -1,0 +1,16 @@
+<h1>タスク一覧</h1>
+
+<% @tasks.each do |t| %>
+  <div class="task-item">
+    <p>
+      <strong>タイトル:</strong> <%= t.title %>
+    </p>
+    <div class="task-actions">
+      <%= link_to '表示', task_path(t) %>
+      <%= link_to '編集', edit_task_path(t) %>
+      <%= link_to '削除', task_path(t), data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか？' } %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to '新しいタスクを追加', new_task_path, class: "button" %>
