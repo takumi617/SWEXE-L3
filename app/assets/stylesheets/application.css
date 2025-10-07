@@ -135,3 +135,8 @@ textarea {
   margin: 0;
   padding-left: 10px;
 }
+
+#pageFooter {
+  border-top: solid 1px #CCCCCC; text-align: center;
+  clear: both;
+}
